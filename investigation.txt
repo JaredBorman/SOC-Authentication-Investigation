@@ -1,0 +1,137 @@
+SOC Investigation: Suspicious Administrator Authentication
+
+Investigator: Jared Borman
+Date: 30 September 2026
+
+Incident Summary:
+
+An investigation was conducted after suspicious authentication activity was identified involving the administrator account. Five consecutive failed login attempts were followed by a successful login from the same IP address, 185.44.72.19.
+
+Following the successful authentication, the administrator account executed several commands, accessed sensitive Finance and HR files, established network connections, and transferred approximately 225 MB of data to the same external IP address before logging out.
+
+Timeline:
+
+09:03:14 - Failed login attempt against the administrator account from 185.44.72.19
+
+09:03:17 - Second failed login attempt from the same IP
+
+09:03:20 - Third failed login attempt from the same IP
+
+09:03:23 - Fourth failed login attempt from the same IP
+
+09:03:26 - Fifth failed login attempt from the same IP
+
+09:03:31 - Successful authentication to the administrator account from 185.44.72.19
+
+09:03:45 - Administrator account logged into the system
+
+09:04:02 - cmd.exe was executed
+
+09:04:08 - The whoami command was executed
+
+09:04:12 - The ipconfig command was executed
+
+09:04:31 - Finance payroll file was accessed
+
+09:04:47 - HR employee records were accessed
+
+09:05:03 - PowerShell was executed
+
+09:05:10 - Connection established with 185.44.72.19 over port 443
+
+09:05:14 - Additional connection established with 185.44.72.19 over port 443
+
+09:05:18 - 52,428,800 bytes of data were sent to 185.44.72.19
+
+09:05:21 - The net user command was executed
+
+09:05:22 - 104,857,600 bytes of data were sent to 185.44.72.19
+
+09:05:26 - 78,643,200 bytes of data were sent to 185.44.72.19
+
+09:05:39 - Company policies document was accessed
+
+09:06:02 - Administrator account logged out
+
+Analysis:
+
+The authentication activity shows a suspicious pattern involving the administrator account.
+
+Five consecutive authentication failures occurred from the same external IP address, 185.44.72.19, within approximately 12 seconds. A successful authentication then occurred from the same IP address 5 seconds after the final failed attempt.
+
+Following the successful authentication, the administrator account executed system reconnaissance commands including whoami and ipconfig. The account subsequently accessed sensitive Finance and HR files.
+
+The account then executed PowerShell and the net user command, followed by network communication with the external IP address over port 443.
+
+Approximately 225 MB of data was subsequently transferred to the same external IP address.
+
+The combination of repeated authentication failures, successful access to a privileged account, system reconnaissance, access to sensitive information, and significant outbound data transfer is consistent with potentially unauthorized activity and possible data exfiltration.
+
+However, the available logs do not independently prove who performed the activity, how the credentials were obtained, or exactly what information was transferred.
+
+Indicators of Interest:
+
+The following indicators were identified during the investigation:
+
+1. External IP Address
+   185.44.72.19
+
+   The IP address was associated with the failed authentication attempts, successful administrator authentication, and subsequent outbound data transfer.
+
+2. Compromised or Suspicious Account
+   administrator
+
+   The administrator account experienced five failed authentication attempts followed by a successful authentication.
+
+3. Suspicious Processes
+   cmd.exe
+   powershell.exe
+
+   Both command-line environments were executed following the successful authentication.
+
+4. Commands
+   whoami
+   ipconfig
+   net user
+
+   These commands were executed after authentication and may provide information about the system, network, or user accounts.
+
+5. Sensitive Files
+   C:\Company\Finance\Payroll.xlsx
+   C:\Company\HR\Employee_Records.xlsx
+
+   These files were accessed following the suspicious authentication.
+
+6. Internal Host
+   10.0.0.50
+
+   The administrator account established connections to this internal host over port 445.
+
+7. Outbound Data Transfer
+   Approximately 225 MB
+
+   Data was transferred to 185.44.72.19 following access to sensitive files.
+
+Recommended Response:
+
+The following actions are recommended:
+
+1. Verify whether the administrator login from 185.44.72.19 was authorized.
+
+2. Investigate the reputation and ownership of 185.44.72.19 using appropriate threat-intelligence resources.
+
+3. Review additional authentication logs for activity involving the same IP address or administrator account.
+
+4. Review the administrator account's activity after the successful login to identify additional commands, file access, or system changes.
+
+5. Determine what data was transferred during the approximately 225 MB outbound transfer.
+
+6. Review the affected systems for evidence of persistence, additional accounts, or unauthorized configuration changes.
+
+7. If unauthorized access is confirmed, reset the administrator account's credentials and consider temporarily disabling the account.
+
+8. Review and strengthen authentication controls, including multi-factor authentication where available.
+
+9. Continue monitoring the affected account, systems, and source IP for related activity.
+
+10. Preserve relevant logs and evidence for further investigation and incident-response procedures.
