@@ -1,0 +1,10 @@
+2026-09-30 08:41:12 | SUCCESS | User: jsmith | Source IP: 10.0.0.25
+2026-09-30 08:42:03 | SUCCESS | User: awilliams | Source IP: 10.0.0.31
+2026-09-30 09:03:14 | FAILED | User: administrator | Source IP: 185.44.72.19
+2026-09-30 09:03:17 | FAILED | User: administrator | Source IP: 185.44.72.19
+2026-09-30 09:03:20 | FAILED | User: administrator | Source IP: 185.44.72.19
+2026-09-30 09:03:23 | FAILED | User: administrator | Source IP: 185.44.72.19
+2026-09-30 09:03:26 | FAILED | User: administrator | Source IP: 185.44.72.19
+2026-09-30 09:03:31 | SUCCESS | User: administrator | Source IP: 185.44.72.19
+2026-09-30 09:08:44 | SUCCESS | User: jsmith | Source IP: 10.0.0.25
+2026-09-30 09:12:09 | SUCCESS | User: awilliams | Source IP: 10.0.0.31
