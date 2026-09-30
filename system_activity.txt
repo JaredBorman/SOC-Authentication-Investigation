@@ -1,0 +1,10 @@
+2026-09-30 09:03:45 | LOGIN | User: administrator | Source IP: 185.44.72.19
+2026-09-30 09:04:02 | PROCESS | User: administrator | Process: cmd.exe
+2026-09-30 09:04:08 | COMMAND | User: administrator | Command: whoami
+2026-09-30 09:04:12 | COMMAND | User: administrator | Command: ipconfig
+2026-09-30 09:04:31 | FILE_ACCESS | User: administrator | File: C:\Company\Finance\Payroll.xlsx
+2026-09-30 09:04:47 | FILE_ACCESS | User: administrator | File: C:\Company\HR\Employee_Records.xlsx
+2026-09-30 09:05:03 | PROCESS | User: administrator | Process: powershell.exe
+2026-09-30 09:05:21 | COMMAND | User: administrator | Command: net user
+2026-09-30 09:05:39 | FILE_ACCESS | User: administrator | File: C:\Company\Public\Company_Policies.pdf
+2026-09-30 09:06:02 | LOGOUT | User: administrator
