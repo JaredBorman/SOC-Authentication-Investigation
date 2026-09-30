@@ -1,0 +1,8 @@
+2026-09-30 09:04:35 | CONNECTION | User: administrator | Destination: 10.0.0.50 | Port: 445
+2026-09-30 09:04:40 | CONNECTION | User: administrator | Destination: 10.0.0.50 | Port: 445
+2026-09-30 09:05:10 | CONNECTION | User: administrator | Destination: 185.44.72.19 | Port: 443
+2026-09-30 09:05:14 | CONNECTION | User: administrator | Destination: 185.44.72.19 | Port: 443
+2026-09-30 09:05:18 | DATA_TRANSFER | User: administrator | Destination: 185.44.72.19 | Bytes Sent: 52428800
+2026-09-30 09:05:22 | DATA_TRANSFER | User: administrator | Destination: 185.44.72.19 | Bytes Sent: 104857600
+2026-09-30 09:05:26 | DATA_TRANSFER | User: administrator | Destination: 185.44.72.19 | Bytes Sent: 78643200
+2026-09-30 09:06:02 | LOGOUT | User: administrator
