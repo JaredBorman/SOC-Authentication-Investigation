@@ -60,6 +60,20 @@ The investigation timeline and detailed analysis can be found in `investigation.
 * `system_activity.txt` - Commands, processes, and file access
 * `network_activity.txt` - Network connections and data transfers
 * `investigation.txt` - Full investigation, timeline, analysis, and indicators of interest
+  
+## Detection Automation
+
+A Python script was created to automate the identification of repeated failed authentication attempts.
+
+The script reads the authentication log, extracts the affected username and source IP address, counts failed authentication attempts, and generates an alert when five or more failures are detected from the same user/IP combination.
+
+Example detection:
+
+User: administrator  
+IP: 185.44.72.19  
+Failed Attempts: 5  
+
+Alert: Multiple failed login attempts detected.
 
 ## Skills Demonstrated
 
